@@ -11,9 +11,11 @@ const connect = function () {
   conn.on("connect", () => {
     console.log("You are connected! 🐍");
   });
+  conn.write("Name: HSL");
   conn.on("data", (data) => {
     console.log("Received data:", data);
   });
+
   return conn;
 };
 
