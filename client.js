@@ -11,9 +11,8 @@ const connect = function () {
   conn.setEncoding("utf8");
   conn.on("connect", () => {
     console.log("You are connected! 🐍");
+    conn.write("Name: HSL");
   });
-
-  conn.write("Name: HSL");
 
   conn.on("data", (data) => {
     console.log("Received data:", data);
